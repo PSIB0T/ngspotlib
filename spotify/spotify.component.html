@@ -1,0 +1,30 @@
+<h1>
+    {{title}}
+</h1>
+
+<div *ngIf="artists.length != 0">
+    
+    <ul>
+        <div class="artistContainer" *ngFor="let artist of artists">
+            <li>
+                <div *ngIf="artist.images; then loadedImage else defaultImage">
+                    
+                </div>
+                <ng-template #loadedImage>
+                    <div  class="imageContainer" [style.background]="'url(' + artist.images[0].url + ')'"></div>
+                </ng-template>
+                <ng-template #defaultImage>
+                    <div  class="imageContainer" [style.background]="'url(' + 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png' + ')'"></div>
+                </ng-template>
+                <div class="name">
+                    <h1>{{artist.name}}</h1>
+                    <p>Popularity: {{artist.popularity}}</p>
+                    <p>Followers: {{artist.followers.total}}</p>
+                </div>
+                
+                
+            </li>
+        </div>
+        
+    </ul>
+</div>

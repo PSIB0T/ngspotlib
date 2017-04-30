@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+ul{
+    list-style-type: none;
+}
+
+.artistContainer{
+    padding: 50px;
+    
+    
+}
+
+.artistContainer li{
+    display: flex;
+    justify-content: space-between;
+    
+}
+h1, .artistContainer li{
+    font-family: 'Roboto';
+}
+.imageContainer{
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat !important ;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.name p{
+    text-align: right;
+}
